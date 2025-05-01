@@ -22,7 +22,7 @@
               <div class="collapse navbar-collapse d-flex justify-content-end " id="navbarNavDropdown">
                 <ul class="navbar-nav d-flex justify-content-around">
                   <li class="nav-item btn-padrao">
-                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Projetos da Faculdade</a>
                   </li>
                   <li class="nav-item btn-padrao">
                     <a class="nav-link" href="#">Features</a>
@@ -44,31 +44,70 @@
                 <p>Olá! Me chamo Mosiah e sou estudante de Análise e Desenvolvimento de Sistemas na Faculdade Senac.
                   Tenho uma verdadeira paixão por criar soluções e transformar ideias em projetos concretos. Neste espaço, compartilho com você um pouco dos meus projetos, tanto pessoais quanto profissionais, além de demonstrar, de forma prática, algumas das minhas habilidades e competências na área de tecnologia.</p>
                 <button class="btn-padrao">button</button>
+                
             </div>
 
         </div>
+      <!-- Modal Área 1 -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal(1)">&times;</span>
+          <h2>Landing Page Homolog Solar</h2>
+          <p>Esse site foi desenvolvido com <strong>HTML, CSS & JavaScript</strong> puro, usando um design responsivo e direto, focando na chamada de ação do usuario para clicar e entrar em contato, essa pagina foi criada com o proposito de divulgar uma promoção.</p>
+          <a href="https://homologsolar.com/" target="_blank">Acesse o site</a>
+        </div>
+      </div>
+
+      <!-- Modal Área 2 -->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal(2)">&times;</span>
+          <h2>Landing Page de serviços web</h2>
+          <p>Descrição completa do projeto AsaWeb.</p>
+        </div>
+      </div>
+
+      <!-- Modal Área 3 -->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal(3)">&times;</span>
+          <h2>Plataforma de solicitação de serviços</h2>
+          <p>Explicação sobre a automação e funcionalidades.</p>
+        </div>
+      </div>
+
+      <!-- Modal Área 4 -->
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal(4)">&times;</span>
+          <h2>Site de Vendas de Parceiro Claro</h2>
+          <p>Mais informações sobre o site e resultados.</p>
+        </div>
+      </div>
         <div class="container" id="about-us-container">
             <h2>Projetos</h2>
             <div class="galery">
-                <div class="area1">
+              
+
+                <div class="area1"  onclick="openModal(1)">
                   <img src="img/homolog.png" alt="">
                   <div class="overlay">
                     <p>Landing Page Homolog Solar</p>
                   </div>
                 </div>
-                <div class="area2">
+                <div class="area2"  onclick="openModal(2)">
                   <img src="img/asaweb.png" alt="">
                   <div class="overlay">
                     <p>Landing Page de serviços web</p>
                   </div>
                 </div>
-                <div class="area3">
+                <div class="area3"  onclick="openModal(3)">
                   <img src="img/solicitacao-servicos.png" alt="">
                   <div class="overlay">
                     <p>Plataforma de solicitação de serviços e automação</p>
                   </div>
                 </div>
-                <div class="area4">
+                <div class="area4"  onclick="openModal(4)">
                   <img src="img/queroclaro.png" alt="">
                   <div class="overlay">
                     <p>Site de Vendas de Parceiro Claro</p>
@@ -121,5 +160,26 @@
     <footer>
         <p>&copy; 2023 Asa Web Services. All rights reserved.</p>
     </footer>
+
+    <script>
+      function openModal(num) {
+        document.getElementById(`modal${num}`).style.display = "block";
+      }
+    
+      function closeModal(num) {
+        document.getElementById(`modal${num}`).style.display = "none";
+      }
+    
+      // Fechar modal clicando fora do conteúdo
+      window.onclick = function(event) {
+        for (let i = 1; i <= 4; i++) {
+          const modal = document.getElementById(`modal${i}`);
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      }
+    </script>
+    
 </body>
 </html>
