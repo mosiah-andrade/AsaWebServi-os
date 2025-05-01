@@ -1,0 +1,63 @@
+.btn{
+    background-color: #2563EB;
+    color: white
+}
+.btn:hover{
+    background-color: #1D4ED8;
+}
+.btn:active{
+    background-color: #1E40AF;
+}
+.btn:focus{
+    background-color: #1E3A8A;
+}
+
+#hero{
+    background-color: #EFF5FF;
+    height: 450px;
+    padding: 2rem;
+    div{
+        width: 50%;
+
+    }
+    #hero-image{
+        margin-top: -5rem;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        height: 600px;
+        background-color: #043250;
+        overflow-x: visible;
+        margin-left: 2rem;
+    }
+    #hero-button{
+        width:100px;
+        margin: 0 0;
+    }
+    .btn-primary{
+        background-color: #2563EB;
+        color: white;
+        border: none;
+        height: 45px;
+        padding: 0 1rem;
+        border-radius: 5px;
+        border: 1px solid #2563EB;
+
+    }
+    .btn-primary:hover{
+        background-color: transparent;
+        color: #2563EB;
+        border: 1px solid #2563EB;
+    }
+    .btn-outline{
+        background-color: transparent;
+        color: #2563EB;
+        border: 1px solid #2563EB;
+        height: 45px;
+        padding: 0 1rem;
+        border-radius: 5px;
+    }
+    .btn-outline:hover{
+        background-color: #2563EB;
+        color: white;
+    }
+}
