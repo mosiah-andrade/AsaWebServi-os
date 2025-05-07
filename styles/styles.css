@@ -9,6 +9,16 @@ body{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+  &:hover{
+    box-shadow: none;
+    border: solid 1px #C7B9B9;
+  }
+  /* .btn-padrao{
+    height: 45px;
+    border: none;
+    margin: 0;
+    box-shadow: none;
+  } */
 
 }
 header{
@@ -47,10 +57,9 @@ header{
       margin-top: 1.5rem;
     }
     .btn-padrao{
-      height: 45px;
-      border: none;
-      margin: 0;
+      margin-left: 0;
     }
+    
   }
 }
 #about-us-container .galery {
@@ -135,15 +144,17 @@ header{
   margin: auto;
   padding: 30px;
   border: 1px solid #888;
-  width: 50vw;
+  width: 80vw;
   height: auto;
   max-height: 80vh;
   overflow-y: auto;
   box-shadow: 8px 10px 20px 0px rgba(0,0,0,0.75);
-  max-width: 500px;
+  max-width: 900px;
   border-radius: 20px;
-  text-align: center;
   animation: fadeIn 0.3s;
+  a{
+    margin-left: 0;
+  }
 }
 
 .close {
