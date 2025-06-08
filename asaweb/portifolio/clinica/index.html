@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica MediCare - Sua Saúde, Nossa Prioridade</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb; /* bg-gray-50 */
+      color: #1f2937; /* text-gray-800 */
+    }
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'],
+    textarea {
+      width: 100%;
+      border: 1px solid #d1d5db; /* border-gray-300 */
+      border-radius: 0.375rem; /* rounded-md */
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+      padding: 0.5rem 0.75rem;
+    }
+    input[type='text']:focus,
+    input[type='email']:focus,
+    input[type='tel']:focus,
+    textarea:focus {
+      border-color: #2563eb; /* focus:border-blue-500 */
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* focus:ring-blue-500 (approximated) */
+    }
+    button[type='submit'], .cta-button {
+      padding: 0.75rem 1.5rem;
+      background-color: #2563eb; /* bg-blue-600 */
+      color: white;
+      font-weight: 600; /* font-semibold */
+      border-radius: 0.375rem; /* rounded-md */
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+      transition: background-color 0.15s ease-in-out;
+    }
+    button[type='submit']:hover, .cta-button:hover {
+      background-color: #1d4ed8; /* hover:bg-blue-700 */
+    }
+    .section-title {
+      font-size: 2.25rem; /* text-3xl or text-4xl */
+      font-weight: 700; /* font-bold */
+      color: #111827; /* text-gray-900 */
+      text-align: center;
+      margin-bottom: 1.5rem; /* mb-6 */
+    }
+    .section-subtitle {
+      font-size: 1.125rem; /* text-lg */
+      color: #4b5563; /* text-gray-600 */
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3rem; /* mb-12 */
+    }
+    .hero-section {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro semi-transparente */
+    }
+    .hero-content {
+      position: relative; /* Para ficar acima do overlay */
+      z-index: 10;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex-shrink-0">
+          <a href="index.html" target="_self" class="flex items-center text-blue-600 hover:text-blue-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8 mr-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" /> <!-- Simplified Medical Icon -->
+            </svg>
+            <span class="font-bold text-2xl">Clínica MediCare</span>
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html" target="_self" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Início</a>
+          <a href="servicos.html" target="_self" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Serviços</a>
+          <a href="equipe.html" target="_self" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Nossa Equipe</a>
+          <a href="depoimentos.html" target="_self" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Depoimentos</a>
+          <a href="contato.html" target="_self" class="font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Contato</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600" aria-label="Alternar menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="h-6 w-6" id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg class="h-6 w-6 hidden" id="menu-icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+      <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" target="_self" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 mobile-nav-link">Início</a>
+        <a href="servicos.html" target="_self" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 mobile-nav-link">Serviços</a>
+        <a href="equipe.html" target="_self" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 mobile-nav-link">Nossa Equipe</a>
+        <a href="depoimentos.html" target="_self" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 mobile-nav-link">Depoimentos</a>
+        <a href="contato.html" target="_self" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 mobile-nav-link">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-24 md:py-40" style="background-image: url('https://cdn.pixabay.com/photo/2018/08/02/07/50/medical-procedures-3579029_1280.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center hero-content">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          Clínica MediCare
+        </h1>
+        <p class="text-xl sm:text-2xl mb-10 max-w-2xl mx-auto">
+          Sua Saúde, Nossa Prioridade. Oferecendo cuidados médicos abrangentes e humanizados para toda a família.
+        </p>
+        <a href="contato.html" target="_self" class="cta-button bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+          Agendar Consulta
+        </a>
+      </div>
+    </section>
+
+    <!-- Bem-vindo Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title">Bem-vindo à Clínica MediCare</h2>
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div class="text-left space-y-4 text-gray-700">
+                <p class="text-lg">
+                    Na Clínica MediCare, nossa missão é oferecer um atendimento médico excepcional, combinando expertise profissional com um cuidado verdadeiramente humano e personalizado. Entendemos que cada paciente é único, e por isso, dedicamos tempo para ouvir suas preocupações, entender suas necessidades e construir um plano de tratamento que seja o mais adequado para sua saúde e bem-estar.
+                </p>
+                <p class="text-lg">
+                    Acreditamos que a prevenção é a chave para uma vida longa e saudável. Nossos programas de check-up e acompanhamento são desenhados para identificar precocemente quaisquer riscos à saúde, permitindo intervenções eficazes. Utilizamos tecnologia de ponta para diagnósticos precisos e tratamentos inovadores, sempre com o objetivo de proporcionar a você e sua família a tranquilidade de saber que estão em boas mãos.
+                </p>
+                <p class="text-lg">
+                    Nossas instalações foram projetadas pensando no seu conforto e privacidade, criando um ambiente acolhedor e seguro. Desde o agendamento da sua consulta até o acompanhamento pós-tratamento, nossa equipe está empenhada em tornar sua experiência conosco a mais positiva possível. Contamos com especialistas em diversas áreas para oferecer um cuidado completo e integrado.
+                </p>
+            </div>
+            <div class="mt-8 md:mt-0">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Médico em consulta amigável na Clínica MediCare" class="rounded-lg shadow-xl w-full h-auto object-cover">
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por Que Escolher Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="section-title">Por Que Escolher a Clínica MediCare?</h2>
+        <p class="section-subtitle mb-12">
+          Comprometidos com sua saúde e bem-estar, oferecemos uma experiência de cuidado diferenciada.
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="flex justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Equipe Qualificada</h3>
+            <p class="text-gray-600 text-sm">Médicos especialistas e experientes dedicados ao seu cuidado integral e personalizado.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="flex justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Atendimento Humanizado</h3>
+            <p class="text-gray-600 text-sm">Foco total no paciente, com escuta atenta, empatia e tratamento individualizado.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="flex justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.646.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 1.655c.007.379.138.75.431.99l1.005.828c.293.24.438.613.43.992a6.759 6.759 0 010 1.654c.007.379-.137.75-.43.99l-.995.828a1.125 1.125 0 01-1.432-.26l-1.295-2.247a1.125 1.125 0 01-.49-1.37l.456-1.217A2.25 2.25 0 009.06 16.35l-.22.127c-.333.183-.583.495-.646.87l-.212 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.645-.87-.075-.04-.148-.083-.221-.127a2.25 2.25 0 00-1.074-.124l-1.217.456a1.125 1.125 0 01-1.37-.49L2.04 17.647a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.759 6.759 0 010-1.655c-.007-.379-.138-.75-.43-.99L2.3 12.098a1.125 1.125 0 01-.26-1.432l1.296-2.247a1.125 1.125 0 011.37-.49l1.217.456A2.25 2.25 0 006.94 7.65l.22-.127c.333-.183.583-.495.646-.87L8.02 5.383c.09-.543.56-.94 1.11-.94H10.7c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.646.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 1.655c.007.379.138.75.431.99L18.7 12.1c.293.24.438.613.43.992a6.759 6.759 0 010 1.654c.007.379-.137.75-.43.99l-.995.828a1.125 1.125 0 01-1.432-.26l-1.295-2.247a1.125 1.125 0 01-.49-1.37l.456-1.217A2.25 2.25 0 0015.06 9.65l-.22-.127c-.333-.183-.583-.495-.646-.87L13.98 7.383z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Tecnologia Moderna</h3>
+            <p class="text-gray-600 text-sm">Equipamentos de ponta para diagnósticos precisos e tratamentos eficazes.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="flex justify-center mb-4">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 7.5H1.5" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Ambiente Aconchegante</h3>
+            <p class="text-gray-600 text-sm">Instalações modernas e confortáveis para promover seu bem-estar e tranquilidade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Explore Links Section -->
+    <section class="py-16 md:py-24 bg-gray-100">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="section-title">Explore Mais</h2>
+        <p class="section-subtitle mb-12">
+          Conheça nossos serviços detalhadamente e nossa equipe de especialistas.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <a href="servicos.html" target="_self" class="block bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h3 class="text-2xl font-semibold text-blue-600 mb-3">Nossos Serviços</h3>
+            <p class="text-gray-600">Descubra a gama completa de especialidades e tratamentos que oferecemos para cuidar da sua saúde.</p>
+          </a>
+          <a href="equipe.html" target="_self" class="block bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h3 class="text-2xl font-semibold text-blue-600 mb-3">Conheça Nossa Equipe</h3>
+            <p class="text-gray-600">Profissionais experientes e dedicados, prontos para oferecer o melhor atendimento médico.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Clínica MediCare</h3>
+          <p class="text-sm leading-relaxed">Rua da Saúde, 123, Cidade Bem-Estar, CA 90210</p>
+          <p class="text-sm mt-2">Telefone: +55 (XX) XXXXX-XXXX</p>
+          <p class="text-sm">Email: contato@medicareclinic.com.br</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Links Rápidos</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" target="_self" class="hover:text-blue-400 transition-colors">Início</a></li>
+            <li><a href="servicos.html" target="_self" class="hover:text-blue-400 transition-colors">Serviços</a></li>
+            <li><a href="equipe.html" target="_self" class="hover:text-blue-400 transition-colors">Nossa Equipe</a></li>
+            <li><a href="depoimentos.html" target="_self" class="hover:text-blue-400 transition-colors">Depoimentos</a></li>
+            <li><a href="contato.html" target="_self" class="hover:text-blue-400 transition-colors">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Conecte-se Conosco</h3>
+          <div class="flex space-x-4">
+            <a href="#" target="_self" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" /></svg>
+            </a>
+            <a href="#" target="_self" class="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-.424.728-.666 1.638-.666 2.601 0 1.707.87 3.212 2.188 4.097-.807-.026-1.566-.247-2.229-.616v.054c0 2.384 1.693 4.373 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.807 2.105-6.102 2.105-.39 0-.775-.023-1.15-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.053 0 13.999-7.496 13.999-13.986 0-.213 0-.425-.015-.635.96-.695 1.798-1.56 2.457-2.549z" /></svg>
+            </a>
+            <a href="#" target="_self" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.273 0-3.669.014-4.944.072-4.358.202-6.78 2.618-6.98 6.98-.059 1.275-.073 1.671-.073 4.944s.014 3.669.072 4.944c.201 4.358 2.618 6.78 6.98 6.98 1.275.059 1.671.073 4.944.073s3.669-.014 4.944-.072c4.354-.202 6.782-2.618 6.979-6.98.059-1.275.073-1.671.073 4.944s-.014-3.669-.072-4.944c-.199-4.358-2.617-6.78-6.979-6.98-1.274-.058-1.67-.072-4.943-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center">
+        <p class="text-sm">&copy; <span id="current-year"></span> Clínica MediCare. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
