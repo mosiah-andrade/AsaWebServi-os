@@ -28,7 +28,7 @@ h2{
     font-size: 36px !important;
 }
 p, span{
-    font-size: 18px;
+    font-size: 18px !important;
 }
 body{
     background-color: var(--branco-gelo);
