@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Bebas+Neue&display=swap');
+
+
+:root{
+    --font: 'Ubuntu';
+    --font-cta: 'Bebas Neue';
+    --branco-gelo: #F5F3EE;
+    --preto-fundo: #0D0D0D;
+    --azul: #7EA2D5;
+    --luz: #4FA50B;
+    --sombra: #001B05;
+    --verde: #027226;
+
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.template-carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    a{
+        text-decoration: none;
+
+    }
+}
+
+.template-item {
+    width: 300px;
+    scroll-snap-align: start;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    text-decoration: none;
+
+}
+
+.template-item:hover {
+    transform: scale(1.05);
+}
+
+.template-img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+.template-info {
+    padding: 15px;
+}
+
+.template-info h2 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.template-info p {
+    color: #666;
+    font-size: 1rem;
+}
+
+
+*{
+    font-family: var(--font), sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+h1{
+    font-size: 54px;
+}
+h2{
+    font-size: 36px;
+}
+p, span{
+    font-size: 18px;
+}
+body{
+    background-color: var(--branco-gelo);
+    
+}
+header{
+    background-color: var(--preto-fundo);
+    img{
+        width: 55px;
+        height: auto;
+    }
+}
+nav{
+    color: var(--branco-gelo);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 200px;
+    padding: 10px 00px;
+}
+#navList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+#navList li a{
+    text-decoration: none;
+    color: var(--branco-gelo);
+    font-size: 18px;
+    padding: 10px 55px;
+    font-family: var(--font-cta), sans-serif;
+
+   
+}
+#navList li a:hover, #navListfooter li a:hover{
+    background-color: var(--azul);
+    transition: background-color 1s;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.cta{
+    background-color: var(--luz);
+    border: none;
+    color: var(--branco-gelo);
+    padding: 10px 22px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(5, 141, 89, 0.25);
+    font-family: var(--font-cta), sans-serif;
+    font-size: 18px;
+}
+
+.cta:hover{
+    background-color: var(--verde);
+    cursor: pointer;
+    transition: background-color 0.5s;
+
+}
+.cta, #navList li a, #navListfooter li a {
+    transition: all 0.3s ease-in-out;
+}
+
+#hero{
+    margin: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141414;
+    padding: 0px 100px;
+    border-radius: 20px;
+    color: var(--branco-gelo);
+
+}
+#hero div{
+    width: 400px;
+
+}
+.subtitle{
+    font-family: var(--font);
+    font-style: italic;
+    font-weight: 100;
+}
+#hero p, #hero button{
+    margin-top: 20px;
+}
+
+#quemsomos{
+    display: grid;
+    margin: 0 100px;
+    justify-content: right;
+    grid-template-rows: 350px 250px;
+    grid-template-columns: 1fr 1fr
+}
+#boxquemsomos{
+    border: solid #027226 2px ;
+    border-radius: 25px; 
+    padding: 0px 100px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 25px;
+    grid-row: 1;
+    grid-column: 1/3;
+
+}
+#quemsomos p{
+    margin-top: 20px;
+}
+#quemsomosgalery{
+    grid-row: 2;
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: auto;
+
+}
+#quemsomosgalery article{
+    width: 350px;
+}
+#servicos{
+    margin: 0 200px;
+
+}
+#servicos h2{
+    text-align: center;
+}
+#servicosGalery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#servicosGalery article{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    width: 400px;
+    text-align: center;
+}
+#servicos img{
+    background-color: #001B05;
+    height: 650px;
+    width: auto;
+    margin-top: 55px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+#cta{
+    background-color: #141414;
+    border-radius: 20px;
+    color: var(--branco-gelo);
+    margin-bottom: 0;
+    margin: 100px 25px;
+    padding: 100px 550px;
+    text-align: center;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+#duvidas{
+    margin: 0px 200px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    h2{
+        margin-bottom: 20px;
+    }
+}
+#duvidas article{ 
+    padding: 25px;
+    background-color: rgba(128, 128, 128, 0.418);
+    border-radius: 20px;
+    margin: 5px;
+}
+#duvidas span{
+    font-weight: bold;
+}
+#galery-netflix{
+    margin: 50px 200px;
+}
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 20px;
+    scrollbar-width: none;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+
+.card {
+    flex: 0 0 auto;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover, #servicos img:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card h2 {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #000;
+    text-align: center;
+    color: var(--azul);
+}
+
+.section-title {
+    margin: 20px 0 0 20px;
+    font-size: 1.5rem;
+    color: var(--verde);
+}
+footer{
+    background-color: #027226;
+    padding-top: 20px;
+    text-align: center;
+}
+footer p{
+    margin-top: 44px;
+    color: aliceblue;
+}
+
+footer nav{
+    justify-content: space-around;
+    margin-top: 40px;
+}
+#navListfooter{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+#navListfooter li a{
+    text-decoration: none;
+    color: var(--preto-fundo);
+    font-family: var(--font-cta);
+    padding: 10px 55px;
+    font-size: 18px;
+}
+.copyright{
+    font-weight: 100;
+    font-family: var(--font);
+    font-style: italic;
+    font-size: 16px;
+    padding-bottom: 44px;
+}
+
+
+@media (max-width:700px) {
+    .template-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .template-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    #navList{
+        display: none;
+    }
+    nav{
+        height: 80px;
+        width: 100vw;
+        margin: 0;
+        align-items: center;
+    }
+    nav .cta {
+        font-weight: bold;
+        padding: 10px 20px;
+        text-transform: uppercase;
+    }
+    
+    #hero{
+        flex-direction: column-reverse;
+        background: none;
+        color: var(--preto-fundo);
+    }
+    #hero img{
+        display: none;
+    }    
+    #hero div{
+        width: 90vw;
+        margin: 20px 0px;
+        padding-bottom:  100px ;
+        background-color: grey;
+        border-radius: 20px;
+        padding: 20px;
+    }    
+    p{
+        font-size: 16px;
+    }
+    #quemsomos{
+        display: flex;
+        flex-direction: column;
+        
+        width: 100vw;
+        margin: 0px;
+    }
+    #boxquemsomos{
+        width: 90vw;
+        padding: 15px;
+        border: none;
+        margin: auto;
+    }
+    #quemsomosgalery{
+        margin-top: 44px;
+        flex-direction: column;
+        width: 90vw;
+        justify-content: center;
+    }
+    #quemsomos button{
+        margin: auto;
+        margin-top: 40px;
+    }
+    #servicos{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100vw;
+    }
+    #servicosGalery{
+        margin-top: 0;
+        flex-direction: column;
+        margin: auto;
+    }
+    #cta{
+        width: 90vw;
+        height: 100%;
+        padding: 0;
+        background: none;
+        color: #0D0D0D;
+    }
+    #duvidas{
+        margin-top: 0;
+        width: 90vw;
+        margin: auto;
+        margin-top: 0px;
+    }
+    #galery-netflix{
+        width: 90%;
+        margin: auto;
+    }
+    .card {
+        width: 150px;
+        scrollbar-width: none;
+    }
+
+    .card h2 {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        margin: 15px 0 0 10px;
+        font-size: 1.2rem;
+    }
+    footer {
+        border-top: 2px solid var(--luz);
+        padding: 20px;
+    }
+    
+    #navListfooter{
+        width: 100vw;
+        display: block;
+        margin-top: 20px;
+        gap: 20px;
+
+    }
+    .copyright{
+        width: 100vw;
+        
+    }
+    
+}
