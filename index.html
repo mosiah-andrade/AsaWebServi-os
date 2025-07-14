@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asa Web</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <meta name="description" content="Serviços web para pequenas empresas, transformando a presença digital da sua empresa com alta tecnologia e inovação">
     <meta name="author" content="Asa Web service">
     <meta name="og:description" content="Serviços web para pequenas empresas, transformando a presença digital da sua empresa com alta tecnologia e inovação">
     <meta name="keywords" content="serviços web, pequenas empresas, presença digital, design de sites, desenvolvimento web, Asa Web, tecnologia digital, marketing online">
 
-    <link rel="stylesheet" href="style.css">
 
     <meta name="keywords" content="serviços web, pequenas empresas, presença digital, design de sites, desenvolvimento web, Asa Web, tecnologia digital, marketing online">
     <meta name="robots" content="index, follow">
@@ -26,7 +29,56 @@
     <meta name="twitter:site" content="@asaweb">
     <meta name="author" content="Asa Web Serviços">
     <link rel="shortcut icon" href="images/asaweb-logo.png" type="image/x-icon">
-    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                    serif: ['Playfair Display', 'serif'],
+                },
+                colors: {
+                    'brand-primary': '#0B132B', // Dark Blue
+                    'brand-secondary': '#1C2541', // Slightly Lighter Dark Blue
+                    'brand-accent': '#3A506B', // Steel Blue
+                    'brand-highlight': '#5BC0BE', // Tealish
+                    'brand-light': '#FFFFFF', // White
+                    'brand-muted': '#F7F9FB', // Very Light Gray
+                    'brand-text': '#A9B4C2', // Light Gray text on dark backgrounds
+                    'brand-text-dark': '#0B132B', // Dark text for light backgrounds
+                },
+                animation: {
+                    'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+                    'slide-in-left': 'slideInLeft 0.5s ease-out forwards',
+                    'fade-in': 'fadeIn 0.5s ease-out forwards',
+                },
+                keyframes: {
+                    fadeInUp: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                    },
+                    slideInLeft: {
+                    '0%': { opacity: '0', transform: 'translateX(-20px)' },
+                    '100%': { opacity: '1', transform: 'translateX(0)' },
+                    },
+                    fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                    }
+                }
+                }
+            }
+        }
+    </script>
+    <script type="importmap">
+    {
+        "imports": {
+            "react": "https://esm.sh/react@^19.1.0",
+            "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+            "react/": "https://esm.sh/react@^19.1.0/"
+        }
+    }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWLSS7DX7T"></script>
     
@@ -70,58 +122,71 @@
             </div>
             <img src="images/asaweb-logo.png" alt="Logotipo da Asa Web">
         </section>
-        <section class="gallery">
-            <h1>Exemplos de Sites</h1>
-            <div class="template-carousel">
-                <div class="template-item">
-                    <img src="images/image copy.png" alt="Template de site 1 - Design moderno e limpo" class="template-img">
-                    <div class="template-info">
-                        <h2>Template Moderno</h2>
-                        <p>Design limpo, responsivo e otimizado para SEO.</p>
-                    </div>
-                </div>
-                <div class="template-item">
-                    <img src="images/image copy 2.png" alt="Template de site 2 - Design criativo e colorido" class="template-img">
-                    <div class="template-info">
-                        <h2>Template Criativo</h2>
-                        <p>Com cores vibrantes e navegação intuitiva.</p>
-                    </div>
-                </div>
-                <div class="template-item">
-                    <img src="images/image.png" alt="Template de site 3 - Estilo minimalista" class="template-img">
-                    <div class="template-info">
-                        <h2>Template Minimalista</h2>
-                        <p>Design simples com foco em conteúdo e usabilidade.</p>
-                    </div>
-                </div>
-                <div class="template-item">
-                    <img src="images/image copy 3.png" alt="Template de site 3 - Estilo minimalista" class="template-img">
-                    <div class="template-info">
-                        <h2>Template Minimalista</h2>
-                        <p>Design simples com foco em conteúdo e usabilidade.</p>
-                    </div>
-                </div>
-                <div class="template-item">
-                    <a href="https://homologsolar.com/" target="_blank">
-                        <img src="images/homolog.png" alt="Template de site 3 - Estilo minimalista" class="template-img">
-                        <div class="template-info">
-                            <h2>Homolog Solar</h2>
-                            <p>Landing page promocional minimalista</p>
-                        </div>
-                    </a>
-                    
-                </div>
-                <div class="template-item">
-                    <img src="images/image copy 4.png" alt="Template de site 3 - Estilo minimalista" class="template-img">
-                    <div class="template-info">
-                        <h2>Template Minimalista</h2>
-                        <p>Design simples com foco em conteúdo e usabilidade.</p>
-                    </div>
-                </div>
+        <section id="projetos" class="py-16 md:py-24 bg-brand-muted text-brand-text-dark animate-fade-in-up">
+    <section id="projetos" class="py-16 md:py-24 bg-brand-muted text-brand-text-dark animate-fade-in-up">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-12 text-brand-primary">Projetos Destacados</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <!-- Adicione mais templates aqui -->
+                <div class="bg-brand-light rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 flex flex-col">
+                    <img src="clinica.png" alt="Projeto de site institucional para clínica médica" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold font-serif mb-2 text-brand-primary">Clinica Medica</h3>
+                        <p class="text-sm text-brand-accent mb-3 flex-grow">Um site completo institucional para uma clinica medica priorizando o Design simples e intuitivo visando tambem a resposividade.</p>
+                        <div class="flex space-x-3">
+                            <a href="https://mosiah-andrade.github.io/AsaWebServi-os/asaweb/portifolio/clinica/index.html" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:text-brand-highlight transition-colors font-medium flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0l-4-4a2 2 0 012.828-2.828L8 7.172l2.586-2.586zM11 5.586L8.414 3A4 4 0 002.757 8.657l4 4a4 4 0 005.657 0l3-3a4 4 0 00-5.657-5.657L11 5.586z" clip-rule="evenodd" /></svg>
+                                Ver Demonstração
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-light rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 flex flex-col">
+                    <img src="homolog_solar.png" alt="Projeto de landing page de captura para Homolog Solar" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold font-serif mb-2 text-brand-primary">Pagina de capitura Homolog Solar</h3>
+                        <p class="text-sm text-brand-accent mb-3 flex-grow">Uma pagina de capitura de uma empresa de homologação fotovoltaica com uma automação integrada no formulario onde a Empresa recebe os dados diretamente no banco de dados do Notion da empresa.</p>
+                        <div class="flex space-x-3">
+                            <a href="https://homologsolar.com/" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:text-brand-highlight transition-colors font-medium flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0l-4-4a2 2 0 012.828-2.828L8 7.172l2.586-2.586zM11 5.586L8.414 3A4 4 0 002.757 8.657l4 4a4 4 0 005.657 0l3-3a4 4 0 00-5.657-5.657L11 5.586z" clip-rule="evenodd" /></svg>
+                                Ver Demonstração
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-light rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 flex flex-col">
+                    <img src="servicoHomolog.png" alt="Projeto de web app de solicitação de serviço com Tally e Notion" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold font-serif mb-2 text-brand-primary">Web App de solicitação de serviço</h3>
+                        <p class="text-sm text-brand-accent mb-3 flex-grow">Uma Solução de solicitação de serviço com automação <strong>Tally e Notion</strong></p>
+                        <div class="flex space-x-3">
+                            <a href="https://mosiah-andrade.github.io/Solicitacao-de-servico/" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:text-brand-highlight transition-colors font-medium flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0l-4-4a2 2 0 012.828-2.828L8 7.172l2.586-2.586zM11 5.586L8.414 3A4 4 0 002.757 8.657l4 4a4 4 0 005.657 0l3-3a4 4 0 00-5.657-5.657L11 5.586z" clip-rule="evenodd" /></svg>
+                                Ver Demonstração
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-light rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 flex flex-col">
+                    <img src="queroClaro.png" alt="Projeto de site de vendas para afiliado Claro" class="w-full h-56 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold font-serif mb-2 text-brand-primary">Site de vendas Afiliado Claro</h3>
+                        <p class="text-sm text-brand-accent mb-3 flex-grow">Pagina de capitura de leads para Afiliado da claro, focado no <strong>Mobile First</strong> e utilizando comunicação visual da Claro.</p>
+                        <div class="flex space-x-3">
+                            <a href="https://queroclaro.com.br/" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:text-brand-highlight transition-colors font-medium flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0l-4-4a2 2 0 012.828-2.828L8 7.172l2.586-2.586zM11 5.586L8.414 3A4 4 0 002.757 8.657l4 4a4 4 0 005.657 0l3-3a4 4 0 00-5.657-5.657L11 5.586z" clip-rule="evenodd" /></svg>
+                                Ver Demonstração
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section>
         <section id="servicos" aria-labelledby="servicos-title">
             <h2 id="servicos-title">Nossos Serviços</h2>
             <div id="servicosGalery">
