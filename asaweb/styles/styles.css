@@ -20,23 +20,21 @@
     max-width: 1800px;
     margin-left:auto;
     margin-right:auto;
-    
-    div{
-        width: 50%;
-
+    #hero-text{
+        margin-left: 50px;
+        margin-right: 100px;
     }
     #hero-image{
         margin-top: -5rem;
         border-bottom-right-radius: 15px;
         border-bottom-left-radius: 15px;
-        height: 600px;
-        max-height: 100vh;
+        width: 100%;
+        height: 150%;
         background-color: #043250;
         overflow-x: visible;
         margin-left: 2rem;
     }
     #hero-button{
-        width:100px;
         margin: 0 0;
     }
     .btn-primary{
@@ -69,6 +67,17 @@
 }
 #category{
     padding: 2rem;
+    .col-3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        width: 400px;
+    }
+    .card{
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 100%;
+    }
     h1{
         color: #2563EB;
         font-size: 2.5rem;
