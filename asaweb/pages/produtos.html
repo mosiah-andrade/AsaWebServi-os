@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Produtos - Ferramentas para o Seu Negócio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="produtos.css">
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">Asa Web</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Produto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="main-header">
+        <div class="container">
+            <h1>Descubra Nossos Produtos</h1>
+            <p class="lead-text">Ferramentas e cursos selecionados para impulsionar seus resultados.</p>
+        </div>
+    </header>
+
+    <main class="container my-5 py-3">
+        <h2 class="section-title text-center mb-5">Conheça Nossos Cursos e Ferramentas Afiliados</h2>
+
+        <div class="search-form-container mb-5">
+            <form id="search-form" class="d-flex justify-content-center">
+                <div class="input-group search-input-group">
+                    <input type="text" class="form-control search-input" id="search-input" placeholder="Buscar por nome do produto...">
+                    <button class="btn btn-primary search-button" type="submit">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <aside class="col-lg-3 col-md-4 sidebar-filters">
+                <div class="filter-section">
+                    <h3 class="filter-title">Categorias</h3>
+                    <div id="category-filters" class="list-group">
+                        <p class="loading-filters text-muted">Carregando filtros...</p>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-title">Preço</h3>
+                    <div id="price-filters">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="price-filter" id="price-all" value="all" checked>
+                            <label class="form-check-label" for="price-all">Todos</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="price-filter" id="price-ate-50" value="ate-50">
+                            <label class="form-check-label" for="price-ate-50">Até R$ 50,00</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="price-filter" id="price-acima-50" value="acima-50">
+                            <label class="form-check-label" for="price-acima-50">Acima de R$ 50,00</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-title">Avaliação</h3>
+                    <div id="rating-filters">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="rating-filter" id="rating-all" value="all" checked>
+                            <label class="form-check-label" for="rating-all">Todas</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="rating-filter" id="rating-4-mais" value="4-mais">
+                            <label class="form-check-label" for="rating-4-mais">4 estrelas ou mais</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-title">Ofertas</h3>
+                    <div id="promo-filters">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="promo-filter">
+                            <label class="form-check-label" for="promo-filter">Apenas promoções</label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="col-lg-9 col-md-8 products-listing">
+                <div class="sort-container mb-4 d-flex justify-content-end">
+                    <div class="d-flex align-items-center">
+                        <label for="sort-by" class="form-label me-2 mb-0">Ordenar por:</label>
+                        <select class="form-select form-select-sm" id="sort-by" style="width: auto;">
+                            <option value="random">Relevância</option>
+                            <option value="price-asc">Preço: Menor para Maior</option>
+                            <option value="price-desc">Preço: Maior para Menor</option>
+                            <option value="rating-desc">Melhor Avaliados</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="cursos-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <p class="loading-message col-12 text-center">Carregando produtos...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="advertising-banner bg-light py-3 text-center">
+        <div class="container">
+            <p class="mb-0"><strong>Quer anunciar seu produto?</strong> <a href="#">Entre em contato</a></p>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Seu Nome/Sua Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Detalhes do Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body-content">
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="#" id="modal-affiliate-link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Adquira agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="produtos.js"></script>
+</body>
+</html>

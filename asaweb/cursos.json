@@ -1,0 +1,178 @@
+{
+  "produtos_afiliados": [
+    {
+      "id_hotmart": "2674981",
+      "nome_produto": "Como declarar Imposto de Renda",
+      "descricao_curta": "O guia passo a passo para você mesmo declarar seu Imposto de Renda e dar adeus às preocupações e noites mal dormidas.",
+      "link_afiliado": "https://go.hotmart.com/F100913942L?dp=1",
+      "preco": 37.00,
+      "preco_original": null,  
+      "moeda": "BRL",
+      "imagem_principal": "https://static-media.hotmart.com/tPCJnP18Snnz9c1etv16vT1MFF8=/300x300/smart/filters:format(webp):background_color(white)/hotmart/product_pictures/703b8ea7-0751-44ca-884c-375da879f650/IMPOSTODERENDA.png?w=920",
+      "imagens_secundarias": [],
+      "categoria": "Finanças",
+      "subcategorias": ["Empreendedorismo", "Imposto de Renda", "Declaração"],
+      "avaliacoes": {
+        "media": 4.8,
+        "total_avaliacoes": 150
+      },
+      "beneficios": [
+        "Passo a passo detalhado",
+        "Dicas para evitar erros",
+        "Suporte ao cliente",
+        "Atualizações anuais inclusas"
+      ],
+      "publico_alvo": [
+        "Autônomos",
+        "MEIs",
+        "Pessoas físicas que declaram IR"
+      ],
+      "data_atualizacao": "2025-07-19"
+    },
+    {
+      "id_hotmart": "4901367",
+      "nome_produto": "Fluxo Fácil - PLANILHA DE FLUXO DE CAIXA",
+      "descricao_curta": "Tenha o controle financeiro total do seu negócio e saiba exatamente para onde vai cada centavo.",
+      "link_afiliado": "https://go.hotmart.com/Q100913652X",
+      "preco": 20.00,
+      "preco_original": 50.00,  
+      "moeda": "BRL",
+      "imagem_principal": "https://static-media.hotmart.com/EiPkh8hMUihZ15x6LLfE1SDbKUs=/filters:background_color(white)/hotmart/product_pictures/10043d6f-9892-4127-935b-48b7d024c7af/PLANILHAIMAGEMFLUXOCAIXA.jpg",
+      "imagens_secundarias": [],
+      "categoria": "Finanças",
+      "subcategorias": ["Empreendedorismo", "Finanças Pessoais", "Planilhas"],
+      "avaliacoes": {
+        "media": 4.9,
+        "total_avaliacoes": 200
+      },
+      "beneficios": [   
+        "Controle total das finanças",
+        "Fácil de usar",
+        "Atualizações gratuitas",
+        "Suporte ao cliente"
+      ],
+      "publico_alvo": [
+        "Microempreendedores",
+        "Pequenos empresários",
+        "Autônomos"
+      ],
+      "data_atualizacao": "2025-07-19"
+    },
+    {
+      "id_hotmart": "4949199",
+      "nome_produto": "Planilha Simples Nacional 2025 com Cálculo de Imposto Automático",
+      "descricao_curta": "A forma mais rápida e segura de calcular seu imposto mensal e organizar suas notas fiscais.",
+      "link_afiliado": "https://go.hotmart.com/D100913741L",
+      "preco": 89.90,
+        "preco_original": 120.00,
+      "moeda": "BRL",
+      "imagem_principal": "https://static-media.hotmart.com/aZgRwX1-FKawf1QLtaIhkFMbZYw=/filters:background_color(white)/hotmart/product_pictures/26c48d67-1a4f-4a44-9187-97d3a562baf9/NFSIMPLES3.JPG",
+      "imagens_secundarias": [],
+      "categoria": "Finanças",
+      "subcategorias": ["Empreendedorismo", "Simples Nacional", "Planilhas"],
+      "avaliacoes": {
+        "media": 4.7,
+        "total_avaliacoes": 180
+      },
+      "beneficios": [
+        "Cálculo automático de impostos",
+        "Organização de notas fiscais",
+        "Fácil de usar",
+        "Suporte ao cliente"
+      ],
+      "publico_alvo": [
+        "Microempreendedores",
+        "Pequenos empresários",
+        "Contadores"
+      ],
+      "data_atualizacao": "2025-07-19"
+    },
+    {
+      "id_hotmart": "5009138",
+      "nome_produto": "Canva ENERGIA SOLAR",
+      "descricao_curta": "Para você que trabalha com energia solar e que não tem tempo de criar artes para as suas redes sociais. Deixe seu feed mais organizado e profissional.",
+      "link_afiliado": "https://go.hotmart.com/E100914684O",
+      "preco": 67.90,
+        "preco_original": null,
+      "moeda": "BRL",
+      "imagem_principal": "https://static-media.hotmart.com/0Cprh8U4kix2TgKezHuyKr2oFh4=/filters:background_color(white)/hotmart/product_pictures/533bda8c-8562-4544-8ef8-e05dfba8f29d/CANVAENERGIASOLAR18.png",
+      "imagens_secundarias": [],
+      "categoria": "Marketing Digital",
+      "subcategorias": ["Design Gráfico", "Redes Sociais", "Canva"],
+      "avaliacoes": {
+        "media": 4.8,
+        "total_avaliacoes": 150
+      },
+      "beneficios": [
+        "Modelos prontos para uso",
+        "Fácil personalização",
+        "Aumenta a visibilidade online",
+        "Suporte ao cliente"
+      ],
+      "publico_alvo": [
+        "Profissionais de energia solar",
+        "Empresas de energia renovável",
+        "Designers gráficos"
+      ],
+      "data_atualizacao": "2025-07-19"
+    },
+    {
+      "id_hotmart": null,
+        "nome_produto": "Pagina de Vendas",
+        "descricao_curta": "Tenha sua pagina de vendas personalizada e otimizada para conversão, sem complicações.",
+        "link_afiliado": "wa.me/5581989929155",
+        "preco": 400.00,
+        "preco_original": 500.00,
+        "moeda": "BRL", 
+        "imagem_principal": "../pagina_vendas.png",
+        "imagens_secundarias": [],
+        "categoria": "Serviços",
+        "subcategorias": ["web design", "marketing digital", "vendas online"],
+        "avaliacoes": {
+            "media": 4.6,
+            "total_avaliacoes": 120
+        },
+        "beneficios": [
+            "Design responsivo",
+            "Otimização para SEO",
+            "Integração com ferramentas de marketing",
+            "Suporte técnico"
+        ],
+        "publico_alvo": [   
+            "Empreendedores digitais",
+            "Lojistas online",
+            "Profissionais de marketing"
+        ],
+        "data_atualizacao": "2025-07-19"
+    },
+    {
+      "id_hotmart": null,
+        "nome_produto": "Google Meu Negócio",
+        "descricao_curta": "Aumente a visibilidade do seu negócio local com uma página otimizada no Google Meu Negócio.",
+        "link_afiliado": "wa.me/5581989929155",
+        "preco": 50.00,
+        "preco_original": 100.00,
+        "moeda": "BRL", 
+        "imagem_principal": "https://th.bing.com/th/id/R.800964f2863b8f4d21d6c3fe7a30c15a?rik=bV966csyFcqVZw&pid=ImgRaw&r=0",
+        "imagens_secundarias": [],
+        "categoria": "Serviços",
+        "subcategorias": ["Marketing Digital", "SEO Local", "Google Meu Negócio"],
+        "avaliacoes": {
+            "media": 4.6,
+            "total_avaliacoes": 120
+        },
+        "beneficios": [
+            "Aumento de visibilidade local",
+            "Melhoria no SEO local",
+            "Gerenciamento de avaliações",
+            "Suporte técnico"
+        ],
+        "publico_alvo": [   
+            "Pequenos empresários",
+            "Lojas locais",
+            "Profissionais autônomos"
+        ],
+        "data_atualizacao": "2025-07-19"
+    }
+  ]
+}
