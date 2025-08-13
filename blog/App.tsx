@@ -9,7 +9,7 @@ import {PostPage} from './pages/posts/PostPage'; // O componente que você já i
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="bg-black text-neutral-200 font-sans">
+      <div className=" text-neutral-200 font-sans" style={{ backgroundColor: '#1e2021' }}>
         <Routes>
           {/* Rota para a página inicial */}
           <Route path="/" element={<HomePage />} />

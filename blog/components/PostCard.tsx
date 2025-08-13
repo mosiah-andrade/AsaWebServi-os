@@ -9,13 +9,13 @@ interface PostCardProps {
 const categoryColors: { [key in Category]: string } = {
   Technology: 'bg-teal-500/10 text-teal-400',
   Business: 'bg-emerald-500/10 text-emerald-400',
-  AI: 'bg-green-500/10 text-green-400',
+  IA: 'bg-green-500/10 text-green-400',
   Startups: 'bg-lime-500/10 text-lime-400',
 };
 
 export const PostCard: React.FC<PostCardProps> = ({ post }) => {
   return (
-    <div className="bg-zinc-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 flex flex-col group">
+    <div className=" rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 flex flex-col group" style={{ backgroundColor: '#1e2021' }}>
       <div className="overflow-hidden">
         <img src={post.imageUrl} alt={post.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
       </div>

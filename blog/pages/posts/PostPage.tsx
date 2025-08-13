@@ -22,9 +22,9 @@ export const PostPage: React.FC = () => {
   // Se o post não for encontrado, mostre uma mensagem de erro
   if (!foundPost) {
     return (
-      <div className="bg-black text-neutral-200 font-sans h-screen flex flex-col justify-between">
+      <div className="text-neutral-200 font-sans h-screen flex flex-col justify-between" style={{ backgroundColor: '#1e2021' }}>
         <Header />
-        <main className="flex-grow flex items-center justify-center">
+        <main className="flex-grow flex items-center justify-center" style={{ backgroundColor: '#1e2021' }}>
           <div className="text-center text-white p-8">
             <h1 className="text-4xl font-bold mb-4">Post não encontrado!</h1>
             <button
@@ -42,7 +42,7 @@ export const PostPage: React.FC = () => {
 
   // Se o post for encontrado, renderize o conteúdo
   return (
-    <div className="bg-black text-neutral-200 font-sans">
+    <div className="bg-black text-neutral-200 font-sans" style={{ backgroundColor: '#1e2021' }}>
       <Header />
       <main>
         <article className="container mx-auto px-4 lg:px-6 py-12 md:py-20 max-w-4xl">
@@ -76,16 +76,7 @@ export const PostPage: React.FC = () => {
             <img src={foundPost.imageUrl} alt={foundPost.title} className="rounded-2xl shadow-2xl object-cover w-full aspect-video" />
           </div>
 
-          <div className="prose prose-lg max-w-none text-neutral-300 prose-headings:text-white prose-strong:text-white prose-a:text-emerald-400 hover:prose-a:text-emerald-300">
-            {/* Renderize o conteúdo do post */}
-            {foundPost.content &&
-             foundPost.content?.trim().split('\n\n').map((paragraph, index) => (
-              <p key={index} className="mb-6 leading-relaxed">
-                {paragraph}
-              </p>
-            )) || <p>Conteúdo não disponível.</p>
-            }
-          </div>
+          <div className="prose prose-lg max-w-none text-neutral-300 prose-headings:text-white prose-strong:text-white prose-a:text-emerald-400 hover:prose-a:text-emerald-300" dangerouslySetInnerHTML={{ __html: foundPost.content }} />
         </article>
       </main>
       <Footer />
