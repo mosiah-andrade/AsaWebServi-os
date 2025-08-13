@@ -16,6 +16,7 @@ export interface Post {
     date: string;
     readingTime: number; 
     linkPost?: string; // Optional property for the post link
+    content?: string; // Optional property for the post content
 }
 
 export type View = 'dashboard' | 'new-post' | 'analytics' | 'settings';

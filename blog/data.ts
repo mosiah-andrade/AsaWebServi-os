@@ -10,7 +10,8 @@ export const featuredPost: Post = {
     author: { name: 'Dr. Evelyn Reed', avatarUrl: 'https://i.pravatar.cc/150?img=1' },
     date: 'July 15, 2024',
     readingTime: 12,
-    linkPost: '/posts/post1'
+    linkPost: 'posts/1',
+    content: `In the rapidly evolving world of decentralized finance (DeFi), understanding the latest trends and innovations is crucial for anyone looking to navigate this complex landscape. From regulatory challenges to the emergence of new financial products, DeFi is reshaping the way we think about finance and investment.`
 };
 
 export const posts: Post[] = [
@@ -23,7 +24,8 @@ export const posts: Post[] = [
         author: { name: 'Mark Chen', avatarUrl: 'https://i.pravatar.cc/150?img=2' },
         date: 'July 12, 2024',
         readingTime: 8,
-        linkPost: '/posts/post1.tsx'
+        linkPost: 'posts/2',
+        content: `In the rapidly evolving world of decentralized finance (DeFi), understanding the latest trends and innovations is crucial for anyone looking to navigate this complex landscape. From regulatory challenges to the emergence of new financial products, DeFi is reshaping the way we think about finance and investment.`
     },
     {
         id: 3,
@@ -34,6 +36,8 @@ export const posts: Post[] = [
         author: { name: 'Aisha Sharma', avatarUrl: 'https://i.pravatar.cc/150?img=3' },
         date: 'July 10, 2024',
         readingTime: 10,
+        linkPost: 'posts/3',
+        content: `In the rapidly evolving world of decentralized finance (DeFi), understanding the latest trends and innovations is crucial for anyone looking to navigate this complex landscape. From regulatory challenges to the emergence of new financial products, DeFi is reshaping the way we think about finance and investment.`
     },
     {
         id: 4,
@@ -44,6 +48,8 @@ export const posts: Post[] = [
         author: { name: 'Ben Carter', avatarUrl: 'https://i.pravatar.cc/150?img=4' },
         date: 'July 8, 2024',
         readingTime: 7,
+        linkPost: 'posts/4',
+        content: `In the rapidly evolving world of decentralized finance (DeFi), understanding the latest trends and innovations is crucial for anyone looking to navigate this complex landscape. From regulatory challenges to the emergence of new financial products, DeFi is reshaping the way we think about finance and investment.`
     },
     {
         id: 5,
@@ -54,6 +60,8 @@ export const posts: Post[] = [
         author: { name: 'Olivia Garcia', avatarUrl: 'https://i.pravatar.cc/150?img=5' },
         date: 'July 5, 2024',
         readingTime: 9,
+        linkPost: 'posts/5',
+        content: `In the rapidly evolving world of decentralized finance (DeFi), understanding the latest trends and innovations is crucial for anyone looking to navigate this complex landscape. From regulatory challenges to the emergence of new financial products, DeFi is reshaping the way we think about finance and investment.`
     },
      {
         id: 6,
@@ -64,5 +72,7 @@ export const posts: Post[] = [
         author: { name: 'Dr. Evelyn Reed', avatarUrl: 'https://i.pravatar.cc/150?img=1' },
         date: 'July 2, 2024',
         readingTime: 11,
+        linkPost: 'posts/6',
+        content: `In the rapidly evolving world of decentralized finance (DeFi), understanding the latest trends and innovations is crucial for anyone looking to navigate this complex landscape. From regulatory challenges to the emergence of new financial products, DeFi is reshaping the way we think about finance and investment.`
     },
 ];

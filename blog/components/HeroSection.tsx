@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Post } from '../types';
+import { Link } from 'react-router-dom';
 
 interface HeroSectionProps {
   post: Post;
@@ -25,9 +26,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ post }) => {
                 <p className="text-neutral-400 text-sm">{post.date} &middot; {post.readingTime} min read</p>
               </div>
             </div>
-            <button className="bg-neutral-100 text-black font-bold px-6 py-3 rounded-lg hover:bg-neutral-300 transition-colors duration-200 shadow-lg" onClick={() => window.location.href = post.linkPost || '#'}>
+            <Link 
+            to={post.linkPost}  className="bg-neutral-100 text-black font-bold px-6 py-3 rounded-lg hover:bg-neutral-300 transition-colors duration-200 shadow-lg" onClick={() => window.location.href = post.linkPost || '#'}>
               Read Article
-            </button>
+            </Link>
           </div>
         </div>
         <div className="order-1 lg:order-2">

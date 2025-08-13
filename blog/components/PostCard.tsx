@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Post, Category } from '../types';
+import { Link } from 'react-router-dom';
 
 interface PostCardProps {
   post: Post;
@@ -26,9 +27,12 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
             <span className="text-neutral-400 text-xs">{post.readingTime} min read</span>
         </div>
         <h3 className="text-xl font-bold text-white mb-2 flex-grow">
-            <a href={post.linkPost} className="hover:text-emerald-400 transition-colors duration-200 cursor-pointer">
-                {post.title}
-            </a>
+          <Link 
+            to={post.linkPost} 
+            className="hover:text-emerald-400 transition-colors duration-200 cursor-pointer"
+          >
+            {post.title}
+          </Link>
         </h3>
         <p className="text-neutral-400 text-sm mb-4">
             {post.excerpt}
